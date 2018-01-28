@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    
+    <util:list id="aObj" list-class="java.util.ArrayList">
+    	<value>23</value>
+    	<value>24</value>
+    	<value>25</value>
+    	<value>26</value>
+    </util:list>
+    
+    <util:map id="mObj" map-class="java.util.TreeMap">
+    	<entry key="1" value="KUmara"/>
+    	<entry key="2" value="patanra"/>
+    	<entry key="3" value="loyara"/>
+    	<entry key="4" value="sumana"/>
+    </util:map>
+    
+    <util:properties id="pObj" >
+    	<prop key="2">Tumara</prop>
+    	<prop key="3">Rinky</prop>
+    	<prop key="4">TInkara</prop>
+    	<prop key="5">Sapna</prop>
+    </util:properties>
+    
+    <util:set id="sObj" set-class="java.util.TreeSet">
+    	<value>Anna</value>
+    	<value>Ye</value>
+    	<value>Raskala</value>
+    	<value>Sammi</value>
+    </util:set>
+    
+    <bean class="com.standAlone.collections.example.Employee" name="empObj" p:empId="23" p:empName="shivam" p:mulEmail-ref="mObj" p:gender-ref="aObj"></bean>
+    </beans>
+    
